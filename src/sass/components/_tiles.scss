@@ -1,0 +1,53 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// Base styles for tiles (styles4tiles~)
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+.tile {
+  position: relative;
+  height: 240px;
+  width: 100%;
+  margin: 36px 0;
+  text-align: center;
+}
+  .tile__link {
+    @extend .white-text;
+    @include trans(0.3s, 0s);
+    position: relative;
+    display: block;
+    height: 100%;
+    background: $primary;
+    overflow: hidden;
+    &::before {
+      @include trans(0.24s, 0s);
+      @include tfree(1, -20deg, -53%, 0);
+      content: '';
+      position: absolute;
+      top: -230%;
+      left: 50%;
+      height: 400%;
+      width: 0;
+      background: rgba(#fff, 0.8);
+      z-index: 3;
+    }
+    &:hover {
+      @include trans(0.3s, 0s);
+      &::before {
+        @include trans(0.33s, 0s);
+        width: 120%;
+      }
+    }
+  }
+    .tile__title {
+      @include trans(0.5s, 0s);
+      position: relative;
+      font-size: 60px;
+      font-family: $label-font;
+      line-height: 240px;
+      font-weight: 700;
+      z-index: 3;
+      box-shadow: inset 0 0 0 6px rgba(#fff, 0);
+      outline: $white solid 1px;
+      outline-offset: -12px;
+    }
+
+

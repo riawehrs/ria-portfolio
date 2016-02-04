@@ -1,0 +1,32 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// General default global styles
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  width: 100%;
+  font-family: $copy-font;
+  font-size: 18px;
+  color: $black;
+  font-variant-ligatures: common-ligatures;
+}
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+a {
+  color: $primary;
+  text-decoration: none;
+}
+.l-site-container {
+  position: relative;
+  height: 100%;
+  width: 100%; 
+  margin: 0 auto;
+}

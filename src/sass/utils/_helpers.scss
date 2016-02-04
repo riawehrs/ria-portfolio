@@ -1,0 +1,42 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// Helper classes to apply a/o extend
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+
+// Max Width
+// | adds default max-width
+// | adds auto margins for centering
+.max-width {
+  max-width: $max-width-default;
+  margin: auto;
+}
+
+
+// Font Smoothing
+// | be careful w/ this
+// | generally only use for white text
+// | always avoid using on lightweight fonts
+// | typically avoid using on serif fonts
+%fontsmooth {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// White Text
+// | applies white text color (orly)
+// | applies font-smoothing stuffs
+.white-text {
+  @extend %fontsmooth;
+  color: $white;
+}
+
+
+// Gradient Background
+// | applies default blue to green gradient
+// |  that apears throughout site
+%gradient-bg {
+  background: $gradient-blue;
+  background: linear-gradient(135deg, $gradient-blue 0%, $gradient-green 100%);
+}

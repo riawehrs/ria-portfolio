@@ -1,0 +1,106 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// Resume <> Layout
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+.l-site-container--resume {
+  @extend %gradient-bg;
+  height: auto;
+  min-height: 100%;
+  max-width: none;
+  padding: 36px 0;
+}
+.resume {
+  position: relative;
+  max-width: 900px;
+  padding: 0 60px 60px;
+  background: $white;
+  margin: 0 auto;
+}
+.resume__paragraph {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $copy-font;
+}
+.resume__subheading {
+  font-style: italic;
+}
+.resume__label {
+  position: relative;
+  padding-top: 36px;
+  font-size: 14px;
+  line-height: 36px;
+  font-family: $label-font;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.resume__list {
+  padding: 0 0 0 10px;
+}
+.resume__list-item {
+  position: relative;
+  padding: 0 0 6px;
+  &:before {
+    content: '\2022';
+    position: absolute;
+    font-size: 16px;
+    line-height: 24px;
+    left: -10px;
+  }
+}
+  .resume__head {
+    position: absolute;
+    width: 250px;
+    padding-top: 48px;
+  }
+    .resume__heading--primary {
+      font-size: 48px;
+      line-height: 78px;
+    }
+    .resume__subheading--primary {
+      font-size: 20px;
+      line-height: 33px;
+    }
+    .resume__contact {
+      padding: 21px 0 0;
+    }
+      .resume__contact-item {
+        font-size: 14px;
+        line-height: 30px;
+      }
+  .resume__work {
+    position: relative;
+    padding: 30px 0 0 310px;
+  }
+    .resume__job {
+      padding: 9px 0 18px;
+    }
+    .resume__job:last-of-type {
+      padding-bottom: 0;
+    }
+      .resume__heading--secondary {
+        font-family: $label-font;
+        font-size: 22px;
+        line-height: 33px;
+        font-weight: 700;
+      }
+      .resume__subheading--secondary {
+        padding: 6px 0 12px;
+        font-size: 16px;
+        line-height: 27px;
+        br {
+          display: none;
+        }
+        .divider {
+          position: relative;
+          bottom: -1px;
+          padding: 0 7px;
+          font-size: 18px;
+          font-style: normal;
+        }
+      }
+  .resume__overview {
+    position: absolute;
+    top: 330px;
+    width: 250px;
+    padding: 0 15px 0 0;
+  }

@@ -1,0 +1,4 @@
+node_modules
+
+# ignore folders that contain static versions of other projects
+/public/*/*/

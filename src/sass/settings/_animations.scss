@@ -1,0 +1,59 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// CSS Animations
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+@keyframes mindful-phrases {
+  0% { opacity: 0; @include tfree(1, 0.01deg, 0, 0.6em); }
+  20% { opacity: 0.5; @include tfree(1, 0.01deg, 0, 0.2em); }
+  40% { opacity: 0.5; @include tfree(1, 0.01deg, 0, -0.2em); }
+  65% { opacity: 0; @include tfree(1, 0.01deg, 0, -0.6em); }
+  100% { opacity: 0; @include tfree(1, 0.01deg, 0, 0.6em); }
+}
+@mixin mindful-phrases {
+  animation-name: mindful-phrases;
+}
+
+@keyframes flailing-phrases {
+  0% { opacity: 0; @include tfree(1, 0.01deg, 0, -0.6em); }
+  20% { opacity: 0.5; @include tfree(1, 0.01deg, 0, -0.2em); }
+  40% { opacity: 0.5; @include tfree(1, 0.01deg, 0, 0.2em); }
+  65% { opacity: 0; @include tfree(1, 0.01deg, 0, 0.6em); }
+  100% { opacity: 0; @include tfree(1, 0.01deg, 0, -0.6em); }
+}
+@mixin flailing-phrases {
+  animation-name: flailing-phrases;
+}
+
+@keyframes mindful-heading-move {
+  0% { @include tfree(1, 0.01deg, 0, 0); }
+  100% { @include tfree(1, 0.01deg, 0, -0.4285em); }
+}
+@mixin mindful-heading-move {
+  animation-name: mindful-heading-move;
+}
+
+@keyframes flailing-heading-move {
+  0% { @include tfree(1, 0.01deg, 0, 0); }
+  100% { @include tfree(1, 0.01deg, 0, 0.4285em); }
+}
+@mixin flailing-heading-move {
+  animation-name: flailing-heading-move;
+}
+
+@keyframes hero-content-bump {
+  0% { @include tfree(1, 0.01deg, 0, 0); }
+  100% { @include tfree(1, 0.01deg, 0, -96px); }
+}
+@mixin hero-content-bump {
+  animation-name: hero-content-bump;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,144 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// Type-related defaults
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+// Heading defaults
+// | based on visual hierarchy
+// | won't always work out like this in reality
+// | i.e. choose the right heading element for the context based
+// |  on semantics, not the size you want the heading to be
+h1 {
+  font-size: 72px;
+  line-height: 96px;
+}
+h2 {
+  font-size: 48px;
+  line-height: 78px;
+}
+h3 {
+  font-size: 42px;
+  line-height: 66px;
+}
+h4 {
+  font-size: 36px;
+  line-height: 54px;
+}
+h5 {
+  font-size: 30px;
+  line-height: 48px;
+}
+h6 {
+  font-size: 24px;
+  line-height: 36px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  font-weight: 800;
+  font-family: $heading-font;
+}
+
+// Body text defaults
+p {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 400;
+  font-family: $copy-font;
+  text-rendering: optimizeLegibility;
+}
+
+// Role-based classes to apply a/o extend
+.label {
+  font-size: 18px;
+  font-family: $label-font;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.section-heading {
+  padding-bottom: 12px;
+  font-size: 36px;
+  font-family: $label-font;
+  font-weight: 700;
+  line-height: 60px;
+}
+.section-subheading {
+  @extend .label;
+  line-height: 54px;
+}
+.section-paragraph {
+  max-width: 720px;
+  font-size: 20px;
+  line-height: 36px;
+  & + .section-paragraph {
+    padding-top: 24px;
+  }
+}
+
+// Quote Marks and Apostrophes
+// | Galano's quote marks and apostrophes and etc are too
+// |  far to the left for my liking
+// | wrap them in a span w/ this class to fix that
+.quote-mark {
+  display: inline-block;
+  position: relative;
+  margin: 0 -0.03em 0 0.03em;
+  &.extra {
+    margin: 0 -0.06em 0 0.06em;
+  }
+}
+
+// Fonts
+@font-face {
+  font-family: 'Galano Classic Alt';
+  font-weight: 800;
+  src: url('../fonts/GalanoClassicAltExtraBold.otf') format('otf'),
+       url('../fonts/GalanoClassicAltExtraBold.ttf') format('truetype'); 
+}
+@font-face {
+  font-family: 'Galano Classic';
+  font-weight: 700;
+  src: url('../fonts/GalanoClassicBold.otf') format('otf'),
+       url('../fonts/GalanoClassicBold.ttf') format('truetype'); 
+}
+@font-face {
+  font-family: 'Galano Classic';
+  font-weight: 900;
+  src: url('../fonts/GalanoClassicBlack.otf') format('otf'),
+       url('../fonts/GalanoClassicBlack.ttf') format('truetype'); 
+}
+
+// Icons
+@font-face {
+  font-family: 'socicon';
+  src: url('../fonts/socicon.eot');
+  src: url('../fonts/socicon.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/socicon.woff') format('woff'),
+       url('../fonts/socicon.ttf') format('truetype'),
+       url('../fonts/socicon.svg#76cc4077294aa89eeb6c5fa684bb9048') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+.social-icon {
+  font-family: 'socicon';
+  content: attr(data-icon);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+}
+
+
+
+
+
+
+
+

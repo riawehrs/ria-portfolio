@@ -1,0 +1,120 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// Buttons – needs to be cleaned up
+// seriously what is happening here
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+@mixin btn {
+  @include stroke(2px, $white);
+  @extend .white-text;
+  @extend .label;
+  display: inline-block;
+  position: relative;
+  height: 72px;
+  padding: 27px 60px 0;
+  font-size: 22px;
+  font-weight: 700;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  background: none; 
+  overflow: hidden;
+  white-space: nowrap;
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    @include trans(0.2s);
+  }
+  &:active:focus,
+  &.active:focus,
+  &:focus {
+    outline: 0;
+  }
+  span {
+    display: inline-block;
+    @include trans(0.2s);
+  }
+}
+@mixin btn--w-icon {
+  @include btn;
+  @include dark-btn-stroke(2px, $white);
+  height: 54px;
+  padding: 20px 72px 0 42px;
+  font-size: 18px;
+  background: rgba($black, 0.77);
+  .icon-cta {
+    position: absolute;
+    top: 20px; 
+    right: 33px;
+    height: 16px;
+    width: 2px;
+    border-radius: 1px;
+    background: $white;
+    @include trans(0.2s);
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      height: 2px;
+      width: 9px;
+      border-radius: 1px;
+      background: $white;
+      @include trans(0.2s);
+    }
+    &:before {
+      left: -7px;
+      -webkit-transform-origin: 8px center;
+      transform-origin: 8px center;
+    }
+    &:after {
+      left: 0;
+      -webkit-transform-origin: 1px center;
+      transform-origin: 1px center;
+    }
+  }
+  &:hover,
+  &:active,
+  &.active {
+    height: 60px;
+    padding-top: 23px;
+    -webkit-backface-visibility: hidden;
+    .icon-cta {
+      top: 23px; 
+      @include tfree(1.15, 45deg, 0, 0);
+      transform-style: preserve-3d;
+      &:before,
+      &:after {
+        top: 0;
+        -webkit-backface-visibility: hidden;
+      }
+      &:before {
+        @include trotate(-46deg);
+      }
+      &:after {
+        @include trotate(46deg);
+      }
+    }
+  }
+  &:active,
+  &.active {
+    height: 54px;
+    padding-top: 19px;
+    .icon-cta {
+        top: 20px;
+    }
+  }
+}
+
+
+.btn {
+  @include btn;
+}
+
+
+
+
+
+
+
+

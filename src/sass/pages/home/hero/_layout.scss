@@ -1,0 +1,180 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// Home <> Hero <> Layout
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+
+.hero {
+  @extend .max-width;
+  @extend .white-text;
+  @extend %gradient-bg;
+  position: relative;
+  height: 100%;
+  z-index: 1;
+}
+.hero-content {
+  display: table;
+  position: relative;
+  height: 95%;
+  width: 100%;
+  text-align: center;
+  transform: translateZ(0);
+  .in & {
+    @include animate(4.8s, 0s);
+    @include hero-content-bump;
+    @include atiming(linear);
+  }
+  .hero-phrases {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 204px;
+    margin: auto;
+    opacity: 0;
+    &.in {
+      @include trans(2s);
+      opacity: 1;
+    }
+  }
+  .mindful-phrases,
+  .flailing-phrases {
+    position: absolute;
+    height: 162px;
+    .hero-phrase {
+      @include atiming(linear);
+      position: absolute;
+      font-size: 24px; 
+      font-family: $copy-font;
+      font-weight: 400;
+      opacity: 1;
+    }
+  }
+  .mindful-phrases {
+    top: -54px;
+    left: 0;
+    right: 50%;
+    .hero-phrase {
+      @include mindful-phrases;
+      &:nth-of-type(1) {
+        @include animateinf(10s, 0s);
+        top: -90px;
+        right: 20%;
+        font-size: 28px;
+      }
+      &:nth-of-type(2) {
+        @include animateinf(10s, 3s);
+        bottom: -48px;
+        right: 14%;
+        font-size: 30px;
+      }
+      &:nth-of-type(3) {
+        @include animateinf(10s, 4s);
+        top: -168px;
+        left: 8%;
+        font-size: 22px;
+      }
+      &:nth-of-type(4) {
+        @include animateinf(10s, 7s);
+        bottom: -120px;
+        left: 12%;
+        font-size: 26px;
+      }
+      &:nth-of-type(5) {
+        @include animateinf(10s, 8s);
+        top: -18px;
+        left: 23%;
+        font-size: 34px;
+      }
+    }
+  }
+  .flailing-phrases {
+    left: 50%;
+    bottom: -54px;
+    right: 0;
+    .hero-phrase {
+      @include flailing-phrases;
+      &:nth-of-type(1) {
+        @include animateinf(10s, 1s);
+        bottom: -90px;
+        left: 20%;
+        font-size: 28px;
+      }
+      &:nth-of-type(2) {
+        @include animateinf(10s, 2s);
+        top: -60px;
+        left: 13%;
+        font-size: 30px;
+      }
+      &:nth-of-type(3) {
+        @include animateinf(10s, 5s);
+        bottom: -156px;
+        right: 6%;
+        font-size: 22px;
+      }
+      &:nth-of-type(4) {
+        @include animateinf(10s, 6s);
+        top: -138px;
+        right: 10%;
+        font-size: 26px;
+      }
+      &:nth-of-type(5) {
+        @include animateinf(10s, 9s);
+        bottom: -24px;
+        right: 20%;
+        font-size: 34px;
+      }
+    }
+  }
+  .hero-heading {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 126px;
+    line-height: 204px;
+    .mindful {
+      display: inline-block;
+      position: relative;
+      padding-right: 30/126+em;
+      &.in {
+        @include animate(0.6s);
+        @include mindful-heading-move;
+      }
+    }
+    .flailing {
+      display: inline-block;
+      position: relative;
+      &.in {
+        @include animate(0.6s);
+        @include flailing-heading-move;
+      }
+    }
+  }
+}
+
+
+.coming-soon {
+  @include tfree(1, 0.01deg, 0, 0);
+  position: relative;
+  height: 192px;
+  width: 100%;
+  padding-top: 21px;
+  text-align: center;
+  background: white;
+  z-index: 5;
+  &.in {
+    @include trans(4.8s, 0s);
+    @include tfree(1, 0.01deg, 0, -192px);
+    @include ttiming(linear);
+  }
+}
+  .coming-soon__heading {
+    @extend .label;
+    display: block;
+    margin-top: -18px;
+    font-size: 24px;
+    color: $black;
+    letter-spacing: 0.05em;
+  }
+  .coming-soon__img {
+    padding-right: 18px;
+  }

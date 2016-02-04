@@ -1,0 +1,109 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// Dev <> Layout
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+.about__intro {
+  position: relative;
+  padding-top: 96px;
+  .section-paragraph {
+    max-width: 700px;
+    & + .section-paragraph {
+      padding-top: 18px;
+    }
+  }
+}
+  .about__intro-content {
+    position: relative;
+    max-width: 1160px;
+    padding: 60px 290px 36px 60px;
+    margin: 0 auto;
+    z-index: 5;
+  }
+    .about__intro-heading {
+      font-size: 60px;
+      line-height: 72px;
+      padding-bottom: 36px;
+      br {
+        display: none;
+      }
+    }
+  .about__intro-graphic {
+    position: absolute;
+    top: 42px;
+    right: 0;
+    width: 50%;
+  }
+    .about__intro-frame {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 270px;
+      overflow: hidden;
+      img {
+        min-width: 350px;
+        max-width: 360px;
+        width: 115%;
+      }
+    }
+
+.about__section {
+  position: relative;
+  padding: 96px 0 0;
+  margin: 96px 0;
+  &:before {
+    content: '';
+    top: 0; right: 0; left: 0;
+    position: absolute;
+    height: 1px;
+    width: 180px;
+    margin: 0 auto;
+    background: $black;
+  }
+}
+  .about__section-content {
+    position: relative;
+    max-width: 800px;
+    padding: 0 40px 24px;
+    margin: 0 auto;
+    z-index: 5;
+  }
+  .about__section-content--contact {
+    max-width: 960px;
+    padding: 0 60px 60px;
+    text-align: center;
+  }
+    .about__subsection {
+      padding: 24px 0 0;
+      max-width: 650px;
+    }
+      .about__text-list {
+        padding: 0 0 0 20px;
+      }
+        .about__text-list-item {
+          position: relative;
+          padding: 0 0 9px;
+          font-size: 18px;
+          line-height: 30px;
+          &:before {
+            content: '\2022';
+            position: absolute;
+            font-size: 20px;
+            line-height: 30px;
+            left: -18px;
+          }
+        }
+    .about__work-list {
+      padding: 12px 0;
+    }
+    .about__contact-list {
+      @include cf;
+      margin: 24px -5px 0;
+    }
+      .about__contact-item {
+        float: left;
+        width: 33%;
+        max-width: 300px;
+        height: 60px;
+        margin: 24px auto;
+        text-align: center;
+      }

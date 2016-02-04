@@ -1,0 +1,62 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// Resume <> Print
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+@media print {
+  .l-site-container--resume,
+  .resume {
+    padding: 0;
+    background: none;
+  }
+  .resume__label {
+    padding-top: 24px;
+  }
+  .resume__paragraph {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .resume__head {
+    padding: 0;
+  }
+    .resume__heading--primary {
+      font-size: 46px;
+    }
+    .resume__subheading--primary {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    .resume__contact {
+      padding: 18px 0;
+    }
+      .resume__contact-item {
+        line-height: 24px;
+      }
+  .resume__work {
+    padding: 0 0 0 3in;
+    .resume__label {
+      padding-top: 18px;
+    }
+  }
+    .resume__job {
+      padding: 9px 0 12px;
+    }
+    .resume__heading--secondary {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    .resume__subheading--secondary {
+      padding: 0 0 6px;
+      font-size: 14px;
+      .divider {
+        padding: 0 6px;
+        font-size: 16px;
+      }
+    }
+  .resume__overview {
+    top: 252px;
+    width: 2.4in;
+  }
+  @page {
+    margin: 1.5cm;
+  }
+}

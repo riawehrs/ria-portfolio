@@ -1,0 +1,29 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// Project <> "Responsiveness"
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+@media screen and (max-width: 59em) { // ~944px
+  .dev-page-link {
+    display: block;
+  }
+  .project:first-of-type {
+    &::after {
+      @include tmove(0, -75%);
+      content: 'Work examples are meant to be viewed on viewports wider than ~944px. It\'s for the best.';
+      position: fixed;
+      top: 50%;
+      right: 0;
+      left: 0;
+      max-width: 500px;
+      padding: 0 20px;
+      margin: auto;
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+  .project__intro,
+  .project__graphic,
+  .project__content {
+    display: none;
+  }
+}

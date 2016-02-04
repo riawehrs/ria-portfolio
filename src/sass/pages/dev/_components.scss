@@ -1,0 +1,222 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// Dev <> Components
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+
+// Work Tiles
+.tile--work {
+  max-width: 720px;
+  .tile__link {
+    &::after {
+      @include trans(0.3s, 0s);
+      @include tscale(1);
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    &:hover {
+      &::after {
+        @include trans(0.36s, 0s);
+        @include tscale(1.1);
+      }
+    }
+  }
+}
+  .tile__link--tmu {
+    background: #f26374;
+    &::before {
+      box-shadow: 0 0 0 500px rgba(#f26374, 0.9);
+    }
+    &::after {
+      background: url('../images/tmu-step-two.jpg') center 18%/100% no-repeat;
+    }
+    &:hover {
+      .tile__title {
+        color: #f26374;
+        box-shadow: inset 0 0 0 6px rgba(#f26374, 0.9);
+        outline: #f26374 solid 1px;
+      }
+    }
+  }
+  .tile__link--toggle {
+    background: #283947;
+    &::before {
+      box-shadow: 0 0 0 500px rgba(#283947, 0.95);
+    }
+    &::after {
+      background: url('../images/toggle-prototype-preview.jpg') center 15%/100% no-repeat;
+    }
+    &:hover {
+      .tile__title {
+        color: #283947;
+        box-shadow: inset 0 0 0 6px rgba(#283947, 0.9);
+        outline: #283947 solid 1px;
+      }
+    }
+  }
+  .tile__link--t-ink {
+    background: #e69c43;
+    &::before {
+      background: rgba(#fff, 0.85);
+      box-shadow: 0 0 0 500px rgba(#e69c43, 0.9);
+    }
+    &::after {
+      background: url('../images/t-ink-preview.jpg') center 75%/100% no-repeat;
+    }
+    &:hover {
+      .tile__title {
+        color: #e69c43;
+        box-shadow: inset 0 0 0 6px rgba(#e69c43, 0.9);
+        outline: #e69c43 solid 1px;
+      }
+    }
+  }
+  .tile__link--jc {
+    background: #9974cc;
+    &::before {
+      background: rgba(#fff, 0.9);
+      box-shadow: 0 0 0 500px rgba(#9974cc, 0.9);
+    }
+    &::after {
+      background: url('../images/jc-issues-preview.jpg') center 75%/100% no-repeat;
+    }
+    &:hover {
+      .tile__title {
+        color: #9974cc;
+        box-shadow: inset 0 0 0 6px rgba(#9974cc, 0.85);
+        outline: #9974cc solid 1px;
+      }
+    }
+  }
+  .tile__link--design {
+    background: #4ba8ad;
+    &::before {
+      box-shadow: 0 0 0 500px rgba(#4ba8ad, 0.9);
+    }
+    &::after {
+      background: url('../images/rex-practice-preview.jpg') center 75%/100% no-repeat;
+    }
+    &:hover {
+      .tile__title {
+        color: #4ba8ad;
+        box-shadow: inset 0 0 0 6px rgba(#4ba8ad, 0.9);
+        outline: #4ba8ad solid 1px;
+      }
+    }
+  }
+  .tile__link--resume {
+    background: #333;
+    &::before {
+      background: rgba(#fff, 0.9);
+      box-shadow: 0 0 0 500px rgba(#333, 0.95);
+    }
+    &::after {
+      background: url('../images/resume-preview.jpg') center 5%/100% no-repeat;
+    }
+    &:hover {
+      .tile__title {
+        color: #333;
+        box-shadow: inset 0 0 0 6px rgba(#333, 0.9);
+        outline: #333 solid 1px;
+      }
+    }
+  }
+
+
+// Button-like Social Tiles
+.about__contact-link {
+  @extend .tile__link;
+  margin: 0 5px;
+  &::before {
+    background: #fff;
+    z-index: 2;
+  }
+  &::after {
+    @include trans(0.35s, 0s);
+    @extend .social-icon;
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 50px;
+    font-size: 24px;
+    line-height: 60px;
+    z-index: 5;
+    text-align: center;
+  }
+  &:hover {
+    &::before {
+      @include trans(0.33s, 0s);
+      width: 150%;
+    }
+  }
+}
+.about__contact-link--li {
+  background: #007bb6;
+  &::before {
+    box-shadow: 0 0 0 200px rgba(#007bb6, 1);
+  }
+  &::after {
+    font-size: 18px;
+    line-height: 58px;
+  }
+  &:hover {
+    .about__contact-title {
+      color: #007bb6;
+      box-shadow: inset 0 0 0 3px rgba(#007bb6, 0.9);
+      outline: #007bb6 solid 1px;
+    }
+    &::after {
+      color: #007bb6;
+    }
+  }
+}
+.about__contact-link--tw {
+  background: #00aced;
+  &::after {
+    font-size: 22px;
+  }
+  &::before {
+    box-shadow: 0 0 0 200px rgba(#00aced, 1);
+  }
+  &:hover {
+    .about__contact-title {
+      color: #00aced;
+      box-shadow: inset 0 0 0 3px rgba(#00aced, 0.9);
+      outline: #00aced solid 1px;
+    }
+    &::after {
+      color: #00aced;
+    }
+  }
+}
+.about__contact-link--em {
+  background: #333;
+  &::after {
+    font-size: 20px;
+  }
+  &::before {
+    box-shadow: 0 0 0 200px rgba(#333, 1);
+  }
+  &:hover {
+    .about__contact-title {
+      color: #333;
+      box-shadow: inset 0 0 0 3px rgba(#333, 0.9);
+      outline: #333 solid 1px;
+    }
+    &::after {
+      color: #333;
+    }
+  }
+}
+  .about__contact-title {
+    @extend .tile__title;
+    @include trans(0.35s, 0s);
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 60px;
+    box-shadow: inset 0 0 0 3px rgba(#fff, 0);
+    outline-offset: -6px;
+  }

@@ -1,0 +1,89 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// Mixins
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+
+// Visual effects – shadows and gradients and etc
+@mixin stroke ($size, $color) {
+  box-shadow: inset 0 0 0 $size $color;
+}
+@mixin dark-btn-stroke ($size, $color) {
+  box-shadow: inset $size 0 $color,
+              inset 0 $size $color,
+              inset (-$size) 0 $color,
+              0px 0px 30px 3px rgba(0,0,0,0.15);
+}
+@mixin innershadow ($size, $color) {
+  box-shadow: inset 0 $size $color;
+}
+@mixin gradient($direction, $s-color, $f-color: $s-color) {
+  background: $s-color;
+  background: linear-gradient(to $direction, $s-color 0%, $f-color 100%);
+}
+
+
+// Simple CSS Transforms
+@mixin tmove($x, $y) {
+  transform: translate($x, $y);
+}
+@mixin tscale($size) {
+  transform: scale($size);
+}
+@mixin trotate($deg) {
+  transform: rotate($deg);
+}
+@mixin tfree($size: 1, $deg: 0deg, $x: 0, $y: 0) {
+  transform: scale($size) rotate($deg) translate($x, $y);
+}
+
+
+// Transition & animation settings
+@mixin trans($duration: 0.2s, $delay: 0s) {
+  transition-duration: $duration;
+  transition-delay: $delay;
+}
+@mixin ttiming($function: ease-in-out) {
+  transition-timing-function: $function;
+}
+@mixin animate($duration: 0.6s, $delay: 0s) {
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-fill-mode: both;
+}
+@mixin animateinf($duration: 0.6s, $delay: 0s) {
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+@mixin atiming($function: ease-in-out) {
+  animation-timing-function: $function;
+}
+@mixin no-animation {
+  animation-name: none;
+}
+
+
+// UI
+@mixin button-size($height, $padding-side, $font-size) {
+  height: $height;
+  padding: 0 $padding-side;
+  font-size: $font-size;
+  line-height: $height;
+}
+@mixin placeholder($color, $weight) {
+  &::-webkit-input-placeholder { color: $color; font-weight: $weight; }
+  &:-moz-input-placeholder { color: $color; font-weight: $weight; }
+  &::-moz-input-placeholder { color: $color; font-weight: $weight; }
+  &:-ms-input-placeholder { color: $color; font-weight: $weight; }
+}
+
+
+// Layout
+@mixin cf {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}

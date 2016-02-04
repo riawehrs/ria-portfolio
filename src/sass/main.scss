@@ -1,0 +1,49 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// Main - import all partials here
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+// Utilities
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/helpers';
+
+
+// Settings
+@import 'settings/reset';
+@import 'settings/type';
+@import 'settings/base';
+@import 'settings/animations';
+
+
+// Components
+@import 'components/buttons';
+@import 'components/tiles';
+
+
+// Pages*
+// + Home
+// ++ Hero
+  @import 'pages/home/hero/layout';
+  @import 'pages/home/hero/responsive';
+
+// + Resume
+  @import 'pages/resume/layout';
+  @import 'pages/resume/responsive';
+  @import 'pages/resume/print';
+
+// + Dev
+  @import 'pages/dev/layout';
+  @import 'pages/dev/responsive';
+  @import 'pages/dev/components';
+
+// + Project
+  @import 'pages/project/layout';
+  @import 'pages/project/responsive';
+
+
+// *Types of partials for pages or page sections
+// | 1. layout - default styles; p much always needed
+// | 2. responsive - media queries; usually needed
+// | 3. print - print styles; rarely needed
+// | 4. components - custom, context-specific styles for
+// |    existing components; somewhat commonly needed

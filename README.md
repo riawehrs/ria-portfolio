@@ -1,0 +1,2 @@
+# Temp Portfolio Thing
+Homepage is a temp placeholder. Simple Dev page gives an overview of my skills, capabilities, and experience, and links to some work examples. Some of the pieces are from my old site, like the homepage hero area and the icon buttons on the project pages. The code for those things can be messy/weird.

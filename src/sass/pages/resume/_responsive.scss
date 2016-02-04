@@ -1,0 +1,82 @@
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+// Resume <> Responsiveness
+// .`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.`.
+
+@media screen and (max-width: 900px) {
+  .l-site-container--resume {
+    padding: 0;
+    background: none;
+  }
+  .resume {
+    padding: 0 5% 72px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .resume {
+    max-width: 500px;
+  }
+  .resume__head,
+  .resume__overview {
+    position: relative;
+  }
+  .resume__head {
+    width: 100%;
+    padding-top: 60px;
+  }
+    .resume__heading--primary {
+      line-height: 72px;
+    }
+    .resume__subheading--primary {
+      font-size: 18px;
+      line-height: 30px;
+      br {
+        display: none;
+      }
+    }
+    .resume__contact {
+      padding: 18px 0 0;
+    }
+  .resume__work {
+    padding: 0;
+  }
+    .resume__job {
+      padding: 12px 0 15px;
+    }
+    .resume__heading--secondary {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  .resume__overview {
+    top: 0;
+    width: 100%;
+    padding: 0 10% 0 0;
+  }
+  .resume__label {
+    padding-top: 48px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .resume {
+    padding: 0 20px 60px;
+  }
+  .resume__subheading--primary {
+    font-size: 16px;
+    line-height: 27px;
+  }
+  .resume__contact-item {
+    line-height: 27px;
+  }
+  .resume__subheading--secondary {
+    padding: 3px 0 9px;
+    line-height: 30px;
+    .divider {
+      display: none;
+    }
+    br {
+      display: block;
+    }
+  }
+  .resume__overview {
+    padding: 0;
+  }
+}
