@@ -49,7 +49,7 @@
         line-height: 120px;
       }
     }
-    .tile--work:nth-of-type(-n+5) {
+    .tile--work:nth-of-type(-n+5) { // selects the first five
       margin: 0;
       height: 72px;
       .tile__title {

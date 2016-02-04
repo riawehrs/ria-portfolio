@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 
-	// add classes for hero intro animations
+  // add classes for hero intro animations
 
   var heroHeadings = $$('#mindful-heading, #flailing-heading');
   var heroHeadingTimer = setTimeout(function() {
